@@ -11,6 +11,11 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+-- auto-start
+--local r = require("runonce")
+--r.run("urxvtd -q -o -f")
+--r.run("urxvtc")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -42,7 +47,7 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "urxvtc"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -355,6 +360,8 @@ root.keys(globalkeys)
 -- }}}
 
 -- {{{ Rules
+--- http://awesome.naquadah.org/wiki/Understanding_Rules
+--- properties : http://awesome.naquadah.org/doc/api/modules/client.html
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
@@ -371,9 +378,15 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Gnuplot" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Figure.*" },
+      properties = { floating = true } },
+    -- Set Firefox to always map on tags number 1 of screen 1.
+    --{ rule = { class = "Firefox" },
+    --   properties = { tag = tags[1][1] ,maximized_vertical = true, maximized_horizontal = true }},
+    --{ rule = { class = "Emacs" },
+    --   properties = { tag = tags[2][2] ,maximized_vertical = true, maximized_horizontal = true }},
+    { rule = { class = "URxvt" },
+       properties = { tag = tags[2][1] ,maximized_vertical = true, maximized_horizontal = true }}
 }
 -- }}}
 

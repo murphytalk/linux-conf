@@ -3,5 +3,7 @@ e(Emacs)        emacs
 fm(Freemind)    /opt/freemind/freemind.sh
 fx(Firefox)     firefox 
 chm             kchmviewer
-pdf             acroread
+pdf             foxitreader
 qt              /opt/Qt/Tools/QtCreator/bin/qtcreator 
+ip              ipython qtconsole --colors=linux --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=9
+ip2             ipython2 qtconsole --colors=linux --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=9
