@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system suspend actions
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/mnt/net/umount.sh
+
+[Install]
+WantedBy=sleep.target
