@@ -76,7 +76,9 @@ theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/defau
 -- theme.wallpaper1 = "/usr/share/awesome/themes/default/background.png"
 -- theme.wallpaper2 = "~/Downloads/space-vertical1.jpg"
 theme.wallpaper1 = "~/Wallpaper/win/win7-broken-1280x1024.jpeg"
-theme.wallpaper2 = "~/Wallpaper/vertical/star.wars/storm-troopers.png"
+--theme.wallpaper2 = "~/Wallpaper/vertical/star.wars/storm-troopers.png"
+theme.wallpaper2 = "~/Wallpaper/star.wars/star-wars_00418025.jpg"
+theme.wallpaper2 = "~/Wallpaper/titan.fall/37277-titanfall_wallpaper.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
