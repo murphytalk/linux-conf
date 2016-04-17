@@ -11,6 +11,8 @@ export QT_IM_MODULE=ibus
 ibus-daemon -drx
 if [ -z "$WM" ];then
 	WM=awesome
+else
+	xbindkeys
 fi
 #xrandr --output DVI-I-1 --rotate left
 urxvtd -q -o -f

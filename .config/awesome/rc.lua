@@ -257,8 +257,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "e"     , function () awful.util.spawn("/opt/kingsoft/wps-office/office6/et") end),
     awful.key({ modkey            }, "k"     , function () awful.util.spawn("keepass") end),
     awful.key({ modkey            }, "q"     , function () awful.util.spawn("/home/murphy/.config/dmenu/dmenu.sh") end),
-    awful.key({ modkey            }, "r"     , function () awful.util.spawn("rdesktop -g 1200x1900 -P -z -x l -r sound:off -u 6020186 127.0.0.1:9090") end),
-
+    -- /f fullscreen /multimon mutiple screens
+    awful.key({ modkey, "Shift","Control"}, "r"     , function () awful.util.spawn("xfreerdp +clipboard /f /bpp:16  /size:1920x1200 /v:127.0.0.1:9090 -u:6020186 -p:'G#entoo1'") end), 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),

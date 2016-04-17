@@ -1,0 +1,29 @@
+# reload configuration:
+# 1) killall -HUP xbindkeys
+# 2) move cursor
+#
+
+"$HOME/linux-config/x_hotkey.sh console"
+ Control+Alt + g
+
+"$HOME/linux-config/x_hotkey.sh emacs"
+ Control+Alt + e
+
+"$HOME/linux-config/x_hotkey.sh file"
+ Control+Alt + f
+
+"$HOME/linux-config/x_hotkey.sh sleep"
+ Mod4 + s
+
+"$HOME/linux-config/x_hotkey.sh firefox"
+ Mod4 + f
+
+"$HOME/linux-config/x_hotkey.sh kdev"
+ Mod4 + v
+
+"$HOME/linux-config/x_hotkey.sh chrome"
+ Mod4 + m
+ 
+"$HOME/linux-config/x_hotkey.sh netflix"
+ Mod4 + n
+ 
