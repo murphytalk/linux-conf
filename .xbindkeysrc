@@ -27,3 +27,6 @@
 "$HOME/linux-config/x_hotkey.sh netflix"
  Mod4 + n
  
+"xfreerdp +clipboard /f /bpp:16  /size:1920x1200 /v:127.0.0.1:9090 -u:6020186 -p:'G#entoo3'"
+ Control+Alt + r
+ 
