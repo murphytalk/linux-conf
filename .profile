@@ -8,6 +8,9 @@ is_lxss(){
     fi  
 }
 
+EDITOR=vim
+
+
 alias ls='ls --color=auto'
 alias t='todo.sh -d ~/.todo.cfg'
 
