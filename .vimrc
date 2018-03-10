@@ -53,6 +53,7 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 set expandtab ts=4 sw=4 ai
-
+"visual bell
+set vb
 "colorscheme VisualStudioDark
 
