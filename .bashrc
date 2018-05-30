@@ -47,7 +47,7 @@ if [[ -z "$TMUX" ]];then
             a=`ls -all ~/.bashrc | sed 's/.* -> \(.*\)/\1/g'`
             p=`dirname $a`
             ln -s $p/.tmux.conf ~/.tmux.conf
-        fi  
+        fi
     fi
     exec tmux
 fi
