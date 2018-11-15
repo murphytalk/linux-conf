@@ -1,0 +1,26 @@
+[DownloadDialog Settings]
+Height 2160=550
+Width 3840=800
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_org.kde.dolphin.desktop,2 services_tilda.desktop,1 services_vmware-player.desktop,1 services_firefox.desktop,1 services_emacs.desktop,3 services_systemsettings.desktop
+pluginWhiteList=services,desktopsessions,PowerDevil,shell,bookmarks,baloosearch,locations
+
+[ScreenConnectors]
+10=DVI-I-1
+11=DP-1
+
+[UniversalSettings]
+canDisableBorders=false
+currentLayout=Mine
+downloadWindowSize=800,550
+lastNonAssignedLayout=Mine
+launchers=
+layoutsColumnWidths=83,358,58,0
+layoutsWindowSize=700,553
+memoryUsage=0
+mouseSensitivity=2
+screenTrackerInterval=2500
+showInfoWindow=true
+unifiedGlobalShortcuts=true
+version=2
