@@ -20,4 +20,6 @@ fi
 
 if uname -a | grep Ubuntu > /dev/null;then
     [ -e "${ZDOTDIR:-$HOME}"/.profile-ubuntu ] && . "${ZDOTDIR:-$HOME}"/.profile-ubuntu
+elif uname -a | grep ARCH > /dev/null;then
+    [ -e "${ZDOTDIR:-$HOME}"/.profile-arch ] && . "${ZDOTDIR:-$HOME}"/.profile-arch
 fi
