@@ -6,8 +6,10 @@ emacs.useXIM: true
 Xft.dpi:96
 Xft.antialias: true
 Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.rgba: rgb
+! Fix uxrvt excessive space between characters
+! https://unix.stackexchange.com/questions/118641/font-rendering-issue-in-urxvt-too-much-space-between-characters
+Xft.hintstyle: hintfull
+Xft.rgba: none
 
 
 ! urxvt
@@ -26,11 +28,15 @@ URxvt.shading:              500
 URxvt.saveLines:            1500
 URxvt.preeditType:          Root
 URxvt.borderLess:           False
+
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
 !URxvt.title:                
 !italicFont and boldItalicFont undefined
 
-URxvt.font:-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*,\
-xft:wenquanyi bitmap song:medium:pixelsize=14
+!URxvt.font:-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*,\
+!URxvt.font:xft:Liberation Mono:size=10:antialias=True
+!,xft:wenquanyi bitmap song:medium:pixelsize=14
 
 !URxvt.font: xft:monaco:size=10:antialias=True,\
 !xft:wenquanyi bitmap song:medium:pixelsize=14:antialias=False
@@ -48,7 +54,9 @@ xft:wenquanyi bitmap song:medium:pixelsize=14
 !URxvt.font:xft:Inconsolata:size=10
 !URxvt.font:xft:Monaco:size=9
 !:antialias=False
-!URxvt.font:xft:Dejavu Sans Mono:size=10:antialias=True
+!URxvt.font:xft:Monospace:style=Regular:size=11:antialias=True
+URxvt.font:xft:Fira Code Retina:style=Light:size=11:antialias=True,\
+xft:Noto Sans CJK SC:style=Regular:size=11:antialias=True
 !redefine color to use tango theme in vim
 !Black
 !URxvt.color0:           #000000
@@ -75,9 +83,11 @@ URxvt.color14:          #34E2E2
 !URxvt.color7:           #D3D7CF
 !URxvt.color15:          #EEEEEC
 
-!!introduced by urxvt-perl
-!URxvt.perl-ext-common:      default,tabbed,clipboard,url-select,keyboard-select
-!URxvt.url-select.launcher:  chromium
+!!introduced by urxvt-perl and urxvt-fullscreen
+URxvt.perl-ext-common:      default,tabbed,matcher,url-select,keyboard-select,fullscreen
+URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.matcher.button:       1
+URxvt.url-select.launcher:  firefox
 !URxvt.url-select.underline: true
 !URxvt.keysym.M-u:           perl:url-select:select_next
 !URxvt.keysym.M-Escape:      perl:keyboard-select:activate
@@ -86,5 +96,3 @@ URxvt.color14:          #34E2E2
 !URxvt.keysym.M-c:   perl:clipboard:copy
 !URxvt.keysym.M-v:   perl:clipboard:paste
 !URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-
-
