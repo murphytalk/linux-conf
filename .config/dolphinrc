@@ -1,0 +1,47 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[DownloadDialog Settings]
+Height 2160=510
+Width 3840=700
+
+[General]
+Version=200
+ViewPropsTimestamp=2018,11,8,18,48,41
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+Height 2160=364
+Width 3840=335
+
+[MainWindow]
+Height 1200=806
+Height 1920=1869
+Height 2160=1869
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAAHJ/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAmAAAHJwAAAFoBAAADAAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAACgEAAAMAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAoBAAADAAABhwAABycAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1200=576
+Width 1920=1200
+Width 3840=576
+
+[Notification Messages]
+ConfirmEmptyTrash=true
+
+[PreviewSettings]
+Plugins=djvuthumbnail,exrthumbnail,windowsimagethumbnail,imagethumbnail,audiothumbnail,fontthumbnail,directorythumbnail,htmlthumbnail,jpegthumbnail,kraorathumbnail,svgthumbnail,windowsexethumbnail,comicbookthumbnail
+
+[Search]
+What=Content
+
+[SettingsDialog]
+Height 2160=432
+Width 3840=540
+
+[VersionControl]
+enabledPlugins=Dropbox,Git

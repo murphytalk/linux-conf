@@ -56,4 +56,15 @@ set expandtab ts=4 sw=4 ai
 "visual bell
 set vb
 colorscheme VisualStudioDark
+" Paste
+set mouse=a
+" Paste with middle mouse click
+vmap <LeftRelease> "*ygv
+" Paste with <Shift> + <Insert>"
+imap <S-Insert> <C-R>*
+
+"if has('gui running')
+"set guifont=Fira_Code_Retina:h10
+"set Guifont=DejaVu_Sans_Mono:h10
+"endif
 

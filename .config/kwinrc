@@ -47,14 +47,18 @@ TopRight=None
 Meta=org.kde.lattedock,/Latte,org.kde.LatteDock,activateLauncherMenu
 
 [Plugins]
+activatelattelaunchermenuEnabled=false
 coverswitchEnabled=true
 cubeslideEnabled=false
 desktopchangeosdEnabled=false
 enforcedecoEnabled=true
 flipswitchEnabled=true
+grid-tilingEnabled=true
 highlightwindowEnabled=true
+kwin-autohotkeyEnabled=true
 kwin4_effect_fadedesktopEnabled=false
 minimizeallEnabled=false
+quarter-tilingEnabled=false
 slideEnabled=true
 synchronizeskipswitcherEnabled=false
 videowallEnabled=true
@@ -232,7 +236,7 @@ DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=1
 HighlightWindows=true
-LayoutName=org.kde.breeze.desktop
+LayoutName=big_icons
 MinimizedMode=0
 MultiScreenMode=0
 ShowDesktopMode=0
