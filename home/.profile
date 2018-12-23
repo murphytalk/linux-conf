@@ -9,10 +9,7 @@ is_lxss(){
 }
 
 EDITOR=vim
-
-
-alias ls='ls --color=auto'
 alias t='todo.sh -d ~/.todo.cfg'
 
 #ArchLinux
-alias y='yaourt'
+alias y='yay'
