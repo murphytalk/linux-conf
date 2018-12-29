@@ -19,3 +19,6 @@ fi
 # to override this https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh#L97
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
+alias t='todo.sh -d ~/.todo.cfg'
+#ArchLinux
+alias y='yay'
