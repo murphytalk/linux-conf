@@ -44,7 +44,7 @@ TopLeft=ShowDesktop
 TopRight=None
 
 [ModifierOnlyShortcuts]
-Meta=org.kde.lattedock,/Latte,org.kde.LatteDock,activateLauncherMenu
+Meta=org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Expose
 
 [Plugins]
 activatelattelaunchermenuEnabled=false
