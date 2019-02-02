@@ -28,3 +28,7 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 alias t='todo.sh -d ~/.todo.cfg'
 #ArchLinux
 alias y='yay'
+
+if [ -x `which docker-compose` ];then
+    alias dc=docker-compose
+fi
