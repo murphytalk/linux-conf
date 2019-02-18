@@ -1,5 +1,8 @@
 . ${HOME}/.zprezto/runcoms/zlogin
 
+if ! uname | grep "Linux pi";then
+    return
+fi
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 
