@@ -11,7 +11,7 @@ while (( "$#" )); do
 done
 
 if [ -z "$dest" ];then
-  echo "basename $0 [-r] <dest dir>"
+  echo "`basename $0` [-r] <dest dir>"
   echo "-r   restore backup to home"
   exit 1
 elif [ ! -d "$dest" ];then
@@ -78,7 +78,7 @@ do_backup(){
 
 do_restore(){
    if [ -f $backup ];then
-      tar -xpzf $backup
+      tar -xpjf $backup
    else
       echo "Cannot find $backup"
       exit 1
