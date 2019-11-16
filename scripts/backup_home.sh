@@ -78,7 +78,7 @@ do_backup(){
 
 do_restore(){
    if [ -f $backup ];then
-      tar -xpzf $backup
+      tar -xpjf $backup
    else
       echo "Cannot find $backup"
       exit 1

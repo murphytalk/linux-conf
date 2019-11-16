@@ -26,9 +26,21 @@ fi
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
 alias t='todo.sh -d ~/.todo.cfg'
-#ArchLinux
-alias y='yay'
 
-#if [ -x `which docker-compose` ];then
-#    alias dc=docker-compose
-#fi
+which docker-compose > /dev/null
+if [ $? -eq 0 ];then
+    alias dc=docker-compose
+fi
+
+if [ -d /etc/pacman.d ];then
+    #ArchLinux
+    alias y='yay'   
+fi
+
+if [ -d /etc/xbps.d ];then
+    #VoidLinux
+    alias xi='sudo xbps-install -S'
+    alias xu='sudo xbps-install -Su'
+    alias xq='sudo xbps-query'
+    alias xr='sudo xbps-remove'
+fi
