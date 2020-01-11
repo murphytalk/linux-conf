@@ -44,3 +44,5 @@ if [ -d /etc/xbps.d ];then
     alias xq='sudo xbps-query'
     alias xr='sudo xbps-remove'
 fi
+
+[ -e ~/.`hostname`-zshrc ] && . ~/.`hostname`-zshrc
