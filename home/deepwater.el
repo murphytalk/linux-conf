@@ -19,4 +19,6 @@
   (insert (format-time-string "%Y-%m-%d %H:%M:%S"))
   (newline)
   (newline))
-(setq org-idx "~/Dropbox/org-mode/index.org")
+
+(setq org-directory "~/Dropbox/org-mode")
+(setq deft-directory org-directory)
