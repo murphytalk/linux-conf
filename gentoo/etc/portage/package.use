@@ -1,17 +1,28 @@
+app-portage/layman -csv -darcs git sync-plugin-portage gpg
+
 dev-libs/openssl bindist
 dev-qt/qtnetwork bindist
 dev-util/cmake -qt5 -emacs
 dev-util/desktop-file-utils -emacs
-kde-plasma/plasma-meta gtk -pam -handbook
+dev-vcs/git emacs
+dev-python/ipython -qt5 matplotlib
+dev-python/matplotlib -wxwidgets -qt5
+sys-devel/clang -llvm_targets_AMDGPU
 
 x11-drivers/nvidia-drivers -abi_x86_32 gtk3 -multilib -wayland
-kde-plasma/plasma-meta -legacy-systray plymouth gtk -networkmanager -handbook
-www-client/firefox geckodriver
-app-editors/emacs gfile libxml2 xwidgets -sound
 x11-terms/rxvt-unicode perl xft font-styles 256-color blink fading-colors gdk-pixbuf
+www-client/firefox geckodriver
 
-dev-vcs/git emacs 
-sys-devel/clang -llvm_targets_AMDGPU
+kde-plasma/plasma-meta -pam -legacy-systray plymouth gtk -networkmanager -handbook
+
+app-editors/emacs gfile libxml2 xwidgets -sound
+app-text/poppler cjk
+app-text/zathura -seccomp
+app-text/zathura-meta pdf djvu
+
+dev-python/pip PYTHON_TARGETS: python2_7 -python3_6 
+
+###### manual config ends here, below are stuff added by emerge #####
 
 # required by dev-qt/qtnetwork-5.14.1::gentoo[ssl]
 # required by dev-qt/qtdeclarative-5.14.1-r2::gentoo
@@ -42,3 +53,11 @@ sys-devel/clang -llvm_targets_AMDGPU
 # required by www-client/firefox-68.7.0-r1::gentoo[system-sqlite]
 # required by firefox (argument)
 >=dev-db/sqlite-3.31.1 secure-delete
+# required by dev-python/pyzmq-17.1.0::gentoo
+# required by dev-python/jupyter_client-5.2.3-r1::gentoo
+# required by dev-python/ipyparallel-6.2.3::gentoo
+# required by dev-python/ipython-7.5.0::gentoo[smp]
+# required by dev-python/ipykernel-5.1.4::gentoo[-test]
+# required by dev-python/notebook-5.7.8::gentoo
+# required by dev-python/notebook (argument)
+>=net-libs/zeromq-4.3.2 drafts
