@@ -20,6 +20,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+[ -d /etc/pacman.d ] && DISTRO_ARCH=y
+[ -d /etc/xbps.d ] && DISTRO_VOID=y
+
 
 # BSD ls's default blue color for director is unreadlable !
 # to override this https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh#L97
@@ -32,12 +35,16 @@ if [ $? -eq 0 ];then
     alias dc=docker-compose
 fi
 
-if [ -d /etc/pacman.d ];then
+
+# distro specific
+if [ ! -z "$DISTRO_ARCH" ];then
     #ArchLinux
-    alias y='yay'   
+    alias y='yay'
+    alias ro='pacman -Rns $(pacman -Qtdq)'
+    export PATH=$PATH:/usr/lib/gettext	
 fi
 
-if [ -d /etc/xbps.d ];then
+if [ ! -z "$DISTRO_VOID" ];then
     #VoidLinux
     alias xi='sudo xbps-install -S'
     alias xu='sudo xbps-install -Su'
@@ -46,3 +53,4 @@ if [ -d /etc/xbps.d ];then
 fi
 
 [ -e ~/.`hostname`-zshrc ] && . ~/.`hostname`-zshrc
+export DISPLAY=:0.0
