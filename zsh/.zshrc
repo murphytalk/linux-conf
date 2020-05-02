@@ -22,7 +22,7 @@ fi
 # Customize to your needs...
 [ -d /etc/pacman.d ] && DISTRO_ARCH=y
 [ -d /etc/xbps.d ] && DISTRO_VOID=y
-
+which emerge > /dev/null && DISTRO_GENTOO=y
 
 # BSD ls's default blue color for director is unreadlable !
 # to override this https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh#L97
@@ -42,6 +42,12 @@ if [ ! -z "$DISTRO_ARCH" ];then
     alias y='yay'
     alias ro='pacman -Rns $(pacman -Qtdq)'
     export PATH=$PATH:/usr/lib/gettext	
+fi
+
+if [ ! -z "$DISTRO_GENTOO" ];then
+    alias e='emerge'
+    alias ea='sudo emerge --ask'
+    alias q='equery'
 fi
 
 if [ ! -z "$DISTRO_VOID" ];then
