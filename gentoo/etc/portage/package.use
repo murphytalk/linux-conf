@@ -8,14 +8,16 @@ dev-vcs/git emacs
 dev-python/ipython -qt5 matplotlib
 dev-python/matplotlib -wxwidgets -qt5
 sys-devel/clang -llvm_targets_AMDGPU
-
+media-sound/pulseaudio -webrtc-aec
 x11-drivers/nvidia-drivers -abi_x86_32 gtk3 -multilib -wayland
 x11-terms/rxvt-unicode perl xft font-styles 256-color blink fading-colors gdk-pixbuf
 www-client/firefox geckodriver
 
-kde-plasma/plasma-meta -pam -legacy-systray plymouth gtk -networkmanager -handbook
+kde-plasma/plasma-meta -pam -legacy-systray plymouth gtk  -handbook
+kde-plasma/powerdevil -wireless
 
 app-editors/emacs gfile libxml2 xwidgets -sound
+app-text/hunspell l10n_en
 app-text/poppler cjk
 app-text/zathura -seccomp
 app-text/zathura-meta pdf djvu
@@ -61,3 +63,8 @@ dev-python/pip PYTHON_TARGETS: python2_7 -python3_6
 # required by dev-python/notebook-5.7.8::gentoo
 # required by dev-python/notebook (argument)
 >=net-libs/zeromq-4.3.2 drafts
+# required by @selected
+# required by @world (argument)
+>=dev-python/notebook-5.7.8 -python_targets_python2_7
+# 
+>=dev-python/nbformat-4.4.0-r1 -python_targets_python2_7
