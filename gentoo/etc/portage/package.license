@@ -7,3 +7,5 @@
 =x11-drivers/nvidia-drivers-440.82 NVIDIA-r2
 # required by dev-java/oracle-jdk-bin (argument)
 >=dev-java/oracle-jdk-bin-1.8.0.202:1.8 Oracle-BCLA-JavaSE
+# required by app-emulation/vmware-workstation (argument)
+>=app-emulation/vmware-workstation-15.5.2.15785246 vmware

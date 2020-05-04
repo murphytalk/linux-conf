@@ -12,15 +12,20 @@ media-sound/pulseaudio -webrtc-aec
 x11-drivers/nvidia-drivers -abi_x86_32 gtk3 -multilib -wayland
 x11-terms/rxvt-unicode perl xft font-styles 256-color blink fading-colors gdk-pixbuf
 www-client/firefox geckodriver
+app-i18n/fcitx -table
+media-video/mplayer bluray cddb dga dv lzo
 
 kde-plasma/plasma-meta -pam -legacy-systray plymouth gtk  -handbook
 kde-plasma/powerdevil -wireless
+kde-apps/spectacle -kipi
 
 app-editors/emacs gfile libxml2 xwidgets -sound
 app-text/hunspell l10n_en
 app-text/poppler cjk
 app-text/zathura -seccomp
 app-text/zathura-meta pdf djvu
+
+app-misc/neofetch -X
 
 dev-python/pip PYTHON_TARGETS: python2_7 -python3_6 
 
@@ -68,3 +73,27 @@ dev-python/pip PYTHON_TARGETS: python2_7 -python3_6
 >=dev-python/notebook-5.7.8 -python_targets_python2_7
 # 
 >=dev-python/nbformat-4.4.0-r1 -python_targets_python2_7
+# required by sys-power/suspend-1.0_p20190605::gentoo[crypt]
+# required by sys-power/suspend (argument)
+>=dev-libs/libgcrypt-1.8.5 static-libs
+# required by sys-power/suspend-1.0_p20190605::gentoo[crypt]
+# required by sys-power/suspend (argument)
+>=dev-libs/libgpg-error-1.36 static-libs
+# required by sys-power/suspend-1.0_p20190605::gentoo[lzo]
+# required by sys-power/suspend (argument)
+>=dev-libs/lzo-2.10 static-libs
+# required by app-emulation/vmware-workstation-15.5.2.15785246::stefantalpalaru
+# required by app-emulation/vmware-workstation (argument)
+>=media-plugins/alsa-plugins-1.2.1 speex
+# required by gnome-base/gnome-keyring-3.34.0::gentoo
+# required by app-crypt/libsecret-0.20.2::gentoo
+# required by app-crypt/pinentry-1.1.0-r2::gentoo[gnome-keyring]
+# required by app-crypt/gnupg-2.2.19::gentoo
+# required by dev-python/pyGPG-0.2::gentoo
+# required by app-portage/layman-2.4.2-r1::gentoo[gpg]
+# required by @selected
+# required by @world (argument)
+>=app-crypt/gcr-3.34.0-r1 gtk
+# required by gnome-base/gnome-keyring-3.34.0::gentoo
+# required by app-crypt/libsecret-0.20.2::gentoo
+>=app-crypt/pinentry-1.1.0-r2 gnome-keyring
