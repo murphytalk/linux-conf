@@ -9,7 +9,7 @@
 # https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout/71258
 #
 
-# fool emacs tramp
+# Fool emacs tramp
 # https://www.emacswiki.org/emacs/TrampMode
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
@@ -22,15 +22,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# Detect distro
 [ -d /etc/pacman.d ] && DISTRO_ARCH=y
 [ -d /etc/xbps.d ] && DISTRO_VOID=y
-which emerge > /dev/null && DISTRO_GENTOO=y
-uname | grep Microsoft > /dev/null && DISTRO_WSL=y
+if [[ $(which emerge) == "/usr/bin/emerge" ]];then DISTRO_GENTOO=y;fi
 
-# BSD ls's default blue color for director is unreadlable !
-# to override this https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh#L97
-export LSCOLORS=Exfxcxdxbxegedabagacad
+uname | grep Microsoft > /dev/null && DISTRO_WSL=y
+uname | grep Darwin > /dev/null && IS_MAC=y
 
 alias t='todo.sh -d ~/.todo.cfg'
 
@@ -41,11 +39,11 @@ fi
 
 
 # distro specific
-if [ ! -z "$DISTRO_ARCH" ];then
-    #ArchLinux
-    alias y='yay'
-    alias ro='pacman -Rns $(pacman -Qtdq)'
-    export PATH=$PATH:/usr/lib/gettext	
+#
+if [ ! -z "$IS_MAC" ];then
+    # BSD ls's default blue color for directory is unreadlable !
+    # to override this https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh#L97
+    export LSCOLORS=Exfxcxdxbxegedabagacad
 fi
 
 if [ ! -z "$DISTRO_GENTOO" ];then
@@ -58,6 +56,13 @@ if [ ! -z "$DISTRO_GENTOO" ];then
     alias u='sudo emerge -uDU --keep-going --with-bdeps=y @world'
     alias cc='sudo emerge --depclean'
     alias bdk='sudo make && sudo make modules_install && sudo make install'
+fi
+
+if [ ! -z "$DISTRO_ARCH" ];then
+    #ArchLinux
+    alias y='yay'
+    alias ro='pacman -Rns $(pacman -Qtdq)'
+    export PATH=$PATH:/usr/lib/gettext	
 fi
 
 if [ ! -z "$DISTRO_WSL" ];then
