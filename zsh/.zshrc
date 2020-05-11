@@ -52,5 +52,12 @@ if [ ! -z "$DISTRO_VOID" ];then
     alias xr='sudo xbps-remove'
 fi
 
+# exclude scoop path
+a=("${(@s/:/)PATH}")
+for i in $a ; if ! echo $i|grep scoop > /dev/null;then newpath="$newpath:$i";fi
+export PATH=$newpath
+unset a
+unset newpath
+
 [ -e ~/.`hostname`-zshrc ] && . ~/.`hostname`-zshrc
-export DISPLAY=:0.0
+#export DISPLAY=:0.0
