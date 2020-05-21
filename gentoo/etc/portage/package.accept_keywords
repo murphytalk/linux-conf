@@ -3,3 +3,6 @@ app-emulation/vmware-modules ~amd64
 =app-emulation/vmware-modules-15.5.2::stefantalpalaru ~amd64
 =app-emulation/vmware-workstation-15.5.2.15785246::stefantalpalaru ~amd64
 app-editors/visual-studio-code ~amd64
+media-fonts/jetbrains-mono ~amd64
+dev-dotnet/dotnetcore-sdk-bin ~amd64
+dev-dotnet/dotnetcore-sdk-bin-common ~amd64

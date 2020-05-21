@@ -20,5 +20,5 @@
   (newline)
   (newline))
 
-(setq org-directory "~/Dropbox/org-mode")
+(setq org-directory "~/work/org-mode")
 (setq deft-directory org-directory)

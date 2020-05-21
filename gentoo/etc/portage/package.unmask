@@ -1,1 +1,7 @@
 =dev-java/openjdk-bin-11.0.7_p10::gentoo
+
+app-emulation/vmware-modules::stefantalpalaru
+app-emulation/vmware-workstation::stefantalpalaru
+
+dev-dotnet/dotnetcore-sdk-bin::dotnet
+dev-dotnet/dotnetcore-sdk-bin-common::dotnet

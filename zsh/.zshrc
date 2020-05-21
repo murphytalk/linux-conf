@@ -31,6 +31,7 @@ uname | grep Microsoft > /dev/null && DISTRO_WSL=y
 uname | grep Darwin > /dev/null && IS_MAC=y
 
 alias t='todo.sh -d ~/.todo.cfg'
+alias ga='git commit --amend --no-edit'
 
 which docker-compose > /dev/null
 if [ $? -eq 0 ];then
@@ -52,10 +53,12 @@ if [ ! -z "$DISTRO_GENTOO" ];then
     }
     alias e='sudo emerge'
     alias ea='sudo emerge --ask'
-    alias q='sudo equery'
-    alias u='sudo emerge -uDU --keep-going --with-bdeps=y @world'
+    alias es='sudo emaint -a sync'
+    alias q='equery'
+    alias u='sudo emerge -uDU --keep-going --with-bdeps=y -vp @world'
+    alias uu='sudo emerge -uDU --keep-going --with-bdeps=y @world'
     alias cc='sudo emerge --depclean'
-    alias bdk='sudo make && sudo make modules_install && sudo make install'
+    alias bdk='sudo make && sudo make modules_install && sudo make install && sudo genkernel --install initramfs'
 fi
 
 if [ ! -z "$DISTRO_ARCH" ];then

@@ -1,0 +1,8 @@
+#mask all packages in overlays
+#needed package is unmasked individually
+*/*::stefantalpalaru
+*/*::dotnet
+*/*::miramir
+
+>sys-kernel/gentoo-sources-5.4.38
+>www-client/firefox-68.8.0

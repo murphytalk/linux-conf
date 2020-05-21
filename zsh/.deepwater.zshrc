@@ -23,5 +23,7 @@ function WFH(){
 	nohup xfreerdp +clipboard /f /bpp:16  /size:1920x1200 /v:127.0.0.1:$port -u:6020186 -p:'G#entoo2' > /tmp/WFH.log 2>&1 &
 }
 
-JAVA_HOME=/mnt/arch/opt/jdk1.8.0_241
-export PATH=$JAVA_HOME/bin:$PATH
+JAVA_HOME=/opt/jdk1.8.0_241
+export PATH=$JAVA_HOME/bin:$PATH:${HOME}/work/toolbox/scripts
+alias mnthp='sudo umount /mnt/hp ; sudo  mount.cifs //hp/DL-All /mnt/hp -o username=murphy,password=java2,rw,uid=1000,gid=1000'
+

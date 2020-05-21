@@ -12,22 +12,31 @@ media-sound/pulseaudio -webrtc-aec
 x11-drivers/nvidia-drivers -abi_x86_32 gtk3 -multilib -wayland
 x11-terms/rxvt-unicode perl xft font-styles 256-color blink fading-colors gdk-pixbuf
 www-client/firefox geckodriver
-app-i18n/fcitx -table
+app-i18n/fcitx -table gtk3
 media-video/mplayer bluray cddb dga dv lzo
+net-nds/openldap samba
+net-irc/irssi -proxy -socks5
 
 kde-plasma/plasma-meta -pam -legacy-systray plymouth gtk  -handbook
 kde-plasma/powerdevil -wireless
 kde-apps/spectacle -kipi
+kde-apps/kio-extras samba
 
 app-editors/emacs gfile libxml2 xwidgets -sound
 app-text/hunspell l10n_en
 app-text/poppler cjk
 app-text/zathura -seccomp
 app-text/zathura-meta pdf djvu
-
+app-emulation/docker -seccomp
 app-misc/neofetch -X
 
 dev-python/pip PYTHON_TARGETS: python2_7 -python3_6 
+net-libs/nodejs inspector
+
+# for Dwarf Fortress
+media-libs/libsdl joystick
+# for Dwarf Fortress Newb pack
+>=dev-lang/python-3.8.2-r2 tk
 
 ###### manual config ends here, below are stuff added by emerge #####
 
