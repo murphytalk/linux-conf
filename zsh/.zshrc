@@ -70,6 +70,12 @@ fi
 
 if [ ! -z "$DISTRO_WSL" ];then
     export DISPLAY=:0.0
+    # exclude scoop path
+    a=("${(@s/:/)PATH}")
+    for i in $a ; if ! echo $i|grep scoop > /dev/null;then newpath="$newpath:$i";fi
+    export PATH=$newpath
+    unset a
+    unset newpath
 fi
 
 if [ ! -z "$DISTRO_VOID" ];then
@@ -79,6 +85,7 @@ if [ ! -z "$DISTRO_VOID" ];then
     alias xq='sudo xbps-query'
     alias xr='sudo xbps-remove'
 fi
+
 
 host_specific="${HOME}/.$(hostname).zshrc"
 [ -L $host_specific ] && . $host_specific
