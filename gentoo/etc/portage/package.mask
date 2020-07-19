@@ -2,7 +2,13 @@
 #needed package is unmasked individually
 */*::stefantalpalaru
 */*::dotnet
+*/*::shnurise
 */*::miramir
-
+*/*::ArtSoftware
+*/*::src_prepare-overlay
+>sys-kernel/linux-headers-5.4
 >sys-kernel/gentoo-sources-5.4.38
->www-client/firefox-68.8.0
+#>x11-drivers/nvidia-drivers-440
+
+#>app-emulation/vmware-modules-15.5.2
+#>app-emulation/vmware-workstation-15.5.2

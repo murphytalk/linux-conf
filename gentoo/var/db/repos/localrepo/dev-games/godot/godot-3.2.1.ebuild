@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{7,8} )
 
-inherit eutils python-any-r1 scons-utils flag-o-matic llvm desktop xdg
+inherit eutils python-any-r1 scons-utils flag-o-matic llvm desktop xdg virtualx
 
 DESCRIPTION="Multi-platform 2D and 3D game engine"
 HOMEPAGE="http://godotengine.org"
@@ -122,9 +122,7 @@ src_configure() {
 		module_theora_enabled=yes
 		module_vorbis_enabled=yes
 		module_webp_enabled=yes
-		# no X11
-		# this is to avoid the issue that cycle 1 built godot.x11 launched by emerge cannot find DISPLAY (reason unknown)
-		platform=server
+		platform=x11
 		progress=yes
 		pulseaudio=$(usex pulseaudio)
 		target=$(usex debug debug release_debug)
@@ -182,15 +180,14 @@ PATCHES=(
 src_compile() {
 	#https://docs.godotengine.org/en/stable/development/compiling/compiling_with_mono.html
 	escons "${myesconsargs1[@]}"
-	whoami
-	bin/${PN}_server.x11.opt.tools.64.mono --generate-mono-glue modules/mono/glue || die "Failed to generate glue"
+	#run inside virtual X
+	virtx bin/${PN}_server.x11.opt.tools.64.mono --generate-mono-glue modules/mono/glue || die "Failed to generate glue"
 	escons "${myesconsargs2[@]}"
 }
 
 src_install() {
 	newicon icon.svg ${PN}.svg
 
-	#dodir "/opt/godot"
 	exeinto "/opt/godot"
 	doexe "$WORKDIR/bin/${PN}.x11.opt.tools.64.mono"
 
@@ -199,8 +196,10 @@ src_install() {
 	doins -r "$WORKDIR/bin/GodotSharp"
 
 	if use llvm; then
-		make_desktop_entry ${PN}.x11.opt.tools.64.llvm Godot
+		exe=${PN}.x11.opt.tools.64.llvm.mono
 	else
-		make_desktop_entry ${PN}.x11.opt.tools.64 Godot
+		exe=${PN}.x11.opt.tools.64.mono
 	fi
+
+	make_desktop_entry ${exe} Godot ${PN} Development Path=/opt/godot
 }

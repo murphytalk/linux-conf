@@ -6,3 +6,21 @@ app-editors/visual-studio-code ~amd64
 media-fonts/jetbrains-mono ~amd64
 dev-dotnet/dotnetcore-sdk-bin ~amd64
 dev-dotnet/dotnetcore-sdk-bin-common ~amd64
+dev-util/msbuild::dotnet ~amd64
+dev-dotnet/msbuild-tasks-api::dotnet ~amd64
+dev-dotnet/msbuild-defaulttasks::dotnet ~amd64
+dev-dotnet/msbuild-roslyn-csc::dotnet ~amd64
+dev-dotnet/buildtools::dotnet ~amd64
+dev-dotnet/newtonsoft-json::dotnet ~amd64
+dev-dotnet/system-reflection-metadata::dotnet ~amd64
+dev-dotnet/system-collections-immutable::dotnet ~amd64
+dev-dotnet/referenceassemblies-pcl::dotnet ~amd64
+dev-util/monodevelop::dotnet ~amd64
+dev-games/godot ~amd64
+
+games-simulation/openttd ~amd64
+games-misc/openmsx ~amd64
+games-misc/opensfx ~amd64
+games-misc/opengfx ~amd64
+
+media-gfx/blender::ArtSoftware ~amd64

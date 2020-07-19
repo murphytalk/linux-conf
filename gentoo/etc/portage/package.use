@@ -32,6 +32,18 @@ app-misc/neofetch -X
 
 dev-python/pip PYTHON_TARGETS: python2_7 -python3_6 
 net-libs/nodejs inspector
+dev-lang/mono minimal
+
+dev-games/godot lto
+media-gfx/gimp xpm
+
+media-gfx/blender -game-engine #openvdb
+media-gfx/openvdb PYTHON_SINGLE_TARGET:  -* python3_7
+
+# for ebuilds that needs dummy X11, e.g godot
+x11-base/xorg-server xvfb
+
+app-admin/keepassxc browser
 
 # for Dwarf Fortress
 media-libs/libsdl joystick
@@ -106,3 +118,94 @@ media-libs/libsdl joystick
 # required by gnome-base/gnome-keyring-3.34.0::gentoo
 # required by app-crypt/libsecret-0.20.2::gentoo
 >=app-crypt/pinentry-1.1.0-r2 gnome-keyring
+# required by dev-games/godot-3.2.1::localrepo
+# required by godot (argument)
+>=dev-libs/libpcre2-10.34 pcre32
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by app-text/calibre-4.9.1-r2::gentoo[python_single_target_python3_7]
+# required by calibre (argument)
+>=dev-python/PyQt5-5.14.1-r1 webchannel
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/numpy-1.17.4-r3 python_targets_python3_6
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/requests-2.23.0 python_targets_python3_6
+# required by media-gfx/blender-2.79b-r2::gentoo[ffmpeg]
+# required by blender (argument)
+>=media-video/ffmpeg-4.2.3 theora
+# required by media-gfx/blender-2.79b-r2::gentoo[openvdb]
+# required by blender (argument)
+>=media-gfx/openvdb-4.0.2-r3 -abi3-compat
+# required by media-gfx/blender-2.79b-r2::gentoo[sdl]
+# required by blender (argument)
+>=media-libs/libsdl2-2.0.10-r1 joystick
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/certifi-2020.4.5.1 python_targets_python3_6
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/chardet-3.0.4 python_targets_python3_6
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/idna-2.8 python_targets_python3_6
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/urllib3-1.25.8 python_targets_python3_6
+# required by dev-python/pyopenssl-19.1.0::gentoo
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/cryptography-2.8-r1 python_targets_python3_6
+# required by dev-python/requests-2.23.0::gentoo[ssl]
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/pyopenssl-19.1.0 python_targets_python3_6
+# required by dev-python/pyopenssl-19.1.0::gentoo
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/setuptools-44.1.0 python_targets_python3_6
+# required by dev-python/pyopenssl-19.1.0::gentoo
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/six-1.14.0 python_targets_python3_6
+# required by dev-python/cryptography-2.8-r1::gentoo[python_targets_python3_6,python_targets_python3_7,python_targets_python2_7]
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/cffi-1.14.0 python_targets_python3_6
+# required by dev-python/cffi-1.14.0::gentoo
+# required by dev-python/cryptography-2.8-r1::gentoo[python_targets_python3_6,python_targets_python3_7,python_targets_python2_7]
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/pycparser-2.20 python_targets_python3_6
+# required by dev-python/pycparser-2.20::gentoo
+# required by dev-python/cffi-1.14.0::gentoo
+# required by dev-python/cryptography-2.8-r1::gentoo[python_targets_python3_6,python_targets_python3_7,python_targets_python2_7]
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/ply-3.11 python_targets_python3_6
+# required by dev-python/urllib3-1.25.8::gentoo
+# required by dev-python/requests-2.23.0::gentoo
+# required by media-gfx/blender-2.79b-r2::gentoo[python_single_target_python3_6]
+# required by blender (argument)
+>=dev-python/PySocks-1.7.1 python_targets_python3_6
+# required by dev-python/numpy-1.18.5::gentoo
+# required by media-gfx/blender-2.81a-r2::ArtSoftware[python_single_target_python3_7]
+# required by @selected
+# required by @world (argument)
+>=dev-python/cython-0.29.20-r2 python_targets_python3_6
