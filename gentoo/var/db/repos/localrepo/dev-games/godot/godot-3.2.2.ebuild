@@ -174,15 +174,15 @@ src_configure() {
 	)
 }
 
-PATCHES=(
-	"${FILESDIR}/GodotTools.BuildLogger.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/GodotTools.BuildLogger.patch"
+#)
 
 src_compile() {
 	#https://docs.godotengine.org/en/stable/development/compiling/compiling_with_mono.html
 	escons "${myesconsargs1[@]}"
 	#run inside virtual X
-	virtx bin/${PN}_server.x11.opt.tools.64.mono --generate-mono-glue modules/mono/glue || die "Failed to generate glue"
+	virtx bin/${PN}.x11.opt.tools.64.mono --generate-mono-glue modules/mono/glue || die "Failed to generate glue"
 	escons "${myesconsargs2[@]}"
 }
 

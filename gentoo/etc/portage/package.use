@@ -50,6 +50,8 @@ media-libs/libsdl joystick
 # for Dwarf Fortress Newb pack
 >=dev-lang/python-3.8.2-r2 tk
 
+app-misc/mc -spell
+
 ###### manual config ends here, below are stuff added by emerge #####
 
 # required by dev-qt/qtnetwork-5.14.1::gentoo[ssl]

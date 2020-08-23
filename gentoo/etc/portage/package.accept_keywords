@@ -1,7 +1,7 @@
 =kde-misc/latte-dock-0.9.11 ~amd64
 app-emulation/vmware-modules ~amd64
-=app-emulation/vmware-modules-15.5.2::stefantalpalaru ~amd64
-=app-emulation/vmware-workstation-15.5.2.15785246::stefantalpalaru ~amd64
+app-emulation/vmware-modules::stefantalpalaru ~amd64
+app-emulation/vmware-workstation::stefantalpalaru ~amd64
 app-editors/visual-studio-code ~amd64
 media-fonts/jetbrains-mono ~amd64
 dev-dotnet/dotnetcore-sdk-bin ~amd64
@@ -24,3 +24,6 @@ games-misc/opensfx ~amd64
 games-misc/opengfx ~amd64
 
 media-gfx/blender::ArtSoftware ~amd64
+
+sys-cluster/spark-bin ~amd64
+app-arch/unrar ~amd64
