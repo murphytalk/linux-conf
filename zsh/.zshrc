@@ -27,8 +27,8 @@ fi
 [ -d /etc/xbps.d ] && DISTRO_VOID=y
 if [[ $(which emerge) == "/usr/bin/emerge" ]];then DISTRO_GENTOO=y;fi
 
-uname | grep Microsoft > /dev/null && DISTRO_WSL=y
-uname | grep Darwin > /dev/null && IS_MAC=y
+uname -a | grep Microsoft > /dev/null && DISTRO_WSL=y
+uname -a | grep Darwin > /dev/null && IS_MAC=y
 
 alias t='todo.sh -d ~/.todo.cfg'
 
