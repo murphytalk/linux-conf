@@ -55,7 +55,7 @@ endif
 set expandtab ts=4 sw=4 ai
 "visual bell
 set vb
-colorscheme VisualStudioDark
+"colorscheme VisualStudioDark
 " Paste
 set mouse=a
 " Paste with middle mouse click

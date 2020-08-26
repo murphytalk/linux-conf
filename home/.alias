@@ -1,0 +1,2 @@
+alias t='todo.sh -d ~/.todo.cfg'
+alias ga='git commit --amend --no-edit'

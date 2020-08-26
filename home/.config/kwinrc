@@ -1,10 +1,13 @@
 [$Version]
-update_info=kwin.upd:replace-scalein-with-scale
+update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:animation-speed
 
 [Compositing]
 OpenGLIsUnsafe=false
 
 [Desktops]
+Id_1=a71ccf0c-1848-42ed-a00e-132d0e3a6be7
+Id_2=9636a7ec-b00f-408c-a7d4-10fce86bd48c
+Id_3=4ceb433a-1ef5-40c8-886a-2b16b1a3b931
 Number=3
 Rows=3
 
@@ -236,7 +239,7 @@ DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=1
 HighlightWindows=true
-LayoutName=big_icons
+LayoutName=org.kde.breeze.desktop
 MinimizedMode=0
 MultiScreenMode=0
 ShowDesktopMode=0
@@ -265,5 +268,11 @@ ElectricBorders=0
 RollOverDesktops=true
 
 [org.kde.kdecoration2]
+BorderSize=Normal
+BorderSizeAuto=true
+ButtonsOnLeft=MS
+ButtonsOnRight=HIAX
+CloseOnDoubleClickOnMenu=false
+ShowToolTips=true
 library=org.kde.breeze
-theme=
+theme=__aurorae__svg__Arc-Dark

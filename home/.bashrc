@@ -3,6 +3,10 @@
 #
 #set -x  #for debug
 # Check if it is Windows Linux Subsystem
+
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+
 if uname -a | grep Microsoft >/dev/null;then
     WSL=1
 fi
@@ -16,24 +20,24 @@ fi
 
 [ -f ~/.profile ] && source ~/.profile
 
-PS1='[\u@\h \W]\$ '
+# the legacy stuff for bash, only when fish is not installed
+if [ ! -x /bin/fish ];then
+   PS1='[\u@\h \W]\$ '
 
-if ! echo $PS1 | grep git_ps1 >/dev/null;then
-    [ -f /etc/profile.d/git-prompt.sh ] && source /etc/profile.d/git-prompt.sh
+   if ! echo $PS1 | grep git_ps1 >/dev/null;then
+       [ -f /etc/profile.d/git-prompt.sh ] && source /etc/profile.d/git-prompt.sh
+       fi
 fi
-
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
 
 which tmux > /dev/null
 if [ $? -ne 0 ];then
     echo Install tmux !
     exit 0
 fi
+
 # I prefer to setup tmux as login shell
 # the following is a workaround if default shell cannot be changed. .e.g Windows Linux Subsystem
 if [[ -z "$TMUX" ]];then
-    echo Launching tmux
     if [[ $WSL == 1 && $OPENSUSE == 1 ]];then
         # OpenSUSE's tmux adpoting the new rule to create socket under /run instead of /var/run
         # but WSL nukes all permission changes to /run when it shutsdown and when it starts /run is always
@@ -49,5 +53,15 @@ if [[ -z "$TMUX" ]];then
             ln -s $p/.tmux.conf ~/.tmux.conf
         fi
     fi
-    exec tmux
+    #tmux_sessions=$(tmux ls)
+    #if [ -z "$tmux_sessions" ];then
+    #     exec tmux attach -t $(echo $tmux_sessions|head -1|sed -r 's/([0-9]*):.*/\1/g')
+    #else
+    if pgrep tmux >/dev/null;then
+       tmux ls
+       [ -x /bin/fish ] && exec /bin/fish
+    else
+       echo Launching tmux
+       exec tmux
+    fi
 fi

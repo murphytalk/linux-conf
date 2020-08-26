@@ -22,6 +22,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+<<<<<<< HEAD
 # Detect distro
 [ -d /etc/pacman.d ] && DISTRO_ARCH=y
 [ -d /etc/xbps.d ] && DISTRO_VOID=y
@@ -83,6 +84,8 @@ if [ ! -z "$DISTRO_VOID" ];then
     alias xr='sudo xbps-remove'
 fi
 
+=======
+>>>>>>> 9fb7cbedddbb497c6d56b4522d50087ddcb86cc7
 
 host_specific="${HOME}/.$(hostname).zshrc"
 [ -L $host_specific ] && . $host_specific
