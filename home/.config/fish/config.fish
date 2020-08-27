@@ -2,16 +2,13 @@ if test -e $HOME/.alias
     source $HOME/.alias
 end
 
-if uname -a | grep Microsoft >/dev/null
+if uname -r | grep -i microsoft >/dev/null
     set WSL 1
 end
 
-if test (which emerge) = "/usr/bin/emerge"
+if uname -r | grep -i gentoo >/dev/null
     set DISTRO_GENTOO 1
-end
 
-
-if test $DISTRO_GENTOO -eq 1
     function c
         sudo emerge --depclean $argv -vp
     end
