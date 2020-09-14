@@ -18,6 +18,9 @@ dev-dotnet/referenceassemblies-pcl::dotnet ~amd64
 dev-util/monodevelop::dotnet ~amd64
 dev-games/godot ~amd64
 
+dev-db/sqlitebrowser ~amd64
+app-editors/qhexedit2 ~amd64
+
 games-simulation/openttd ~amd64
 games-misc/openmsx ~amd64
 games-misc/opensfx ~amd64

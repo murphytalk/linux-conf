@@ -1,2 +1,3 @@
 alias t='todo.sh -d ~/.todo.cfg'
 alias ga='git commit --amend --no-edit'
+alias fj='~/work/toolbox/scripts/finance-job-on-deepwater.sh'

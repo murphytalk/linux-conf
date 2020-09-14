@@ -10,8 +10,11 @@ dev-python/matplotlib -wxwidgets -qt5
 sys-devel/clang -llvm_targets_AMDGPU
 media-sound/pulseaudio -webrtc-aec
 x11-drivers/nvidia-drivers -abi_x86_32 gtk3 -multilib -wayland
-x11-terms/rxvt-unicode perl xft font-styles 256-color blink fading-colors gdk-pixbuf
-www-client/firefox geckodriver
+
+x11-terms/rxvt-unicode 256-color blink fading-colors font-styles iso14755 mousewheel perl pixbuf unicode3 wide-glyphs
+x11-terms/st savedconfig
+
+www-client/firefox geckodriver hwaccel
 app-i18n/fcitx -table gtk3
 media-video/mplayer bluray cddb dga dv lzo
 net-nds/openldap samba
@@ -22,7 +25,7 @@ kde-plasma/powerdevil -wireless
 kde-apps/spectacle -kipi
 kde-apps/kio-extras samba
 
-app-editors/emacs gfile libxml2 xwidgets -sound
+app-editors/emacs inotify libxml2 xwidgets gzip-el harfbuzz json -sound -gfile
 app-text/hunspell l10n_en
 app-text/poppler cjk
 app-text/zathura -seccomp

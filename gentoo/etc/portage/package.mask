@@ -12,3 +12,5 @@
 
 #>app-emulation/vmware-modules-15.5.2
 #>app-emulation/vmware-workstation-15.5.2
+
+x11-terms/rxvt-unicode::gentoo
