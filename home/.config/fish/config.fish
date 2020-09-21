@@ -16,3 +16,5 @@ if uname -r | grep -i gentoo >/dev/null
         source $HOME/.alias.gentoo
     end
 end
+
+setenv JAVA_HOME /opt/openjdk-bin-11.0.8_p10/

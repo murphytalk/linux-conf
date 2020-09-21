@@ -30,3 +30,11 @@ media-gfx/blender::ArtSoftware ~amd64
 
 sys-cluster/spark-bin ~amd64
 app-arch/unrar ~amd64
+
+dev-java/openjdk-bin:11 ~amd64
+app-emulation/libpod ~amd64
+app-emulation/conmon ~amd64
+app-emulation/slirp4netns  ~amd64
+sys-fs/fuse-overlayfs  ~amd64
+
+app-text/pandoc ~amd64

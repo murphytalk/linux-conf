@@ -23,5 +23,13 @@ wmclass=st-256color
 wmclasscomplete=false
 wmclassmatch=1
 
+[2]
+Description=emacs
+activity=00000000-0000-0000-0000-000000000000
+activityrule=2
+wmclass=emacs
+wmclasscomplete=false
+wmclassmatch=1
+
 [General]
-count=1
+count=2
