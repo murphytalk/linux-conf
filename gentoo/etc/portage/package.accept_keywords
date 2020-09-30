@@ -38,3 +38,4 @@ app-emulation/slirp4netns  ~amd64
 sys-fs/fuse-overlayfs  ~amd64
 
 app-text/pandoc ~amd64
+app-backup/mkstage4 ~amd64

@@ -9,7 +9,8 @@
 >sys-kernel/linux-headers-5.4-r1
 >sys-kernel/gentoo-sources-5.4.48
 <sys-kernel/gentoo-sources-5.4.48
->x11-drivers/nvidia-drivers-440.100-r1
+
+>x11-drivers/nvidia-drivers-440.100-r2
 
 #>app-emulation/vmware-modules-15.5.2
 #>app-emulation/vmware-workstation-15.5.2

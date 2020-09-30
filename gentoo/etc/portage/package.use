@@ -1,6 +1,8 @@
 */* PYTHON_TARGETS: -python3_7 python3_8
 */* PYTHON_SINGLE_TARGET: -* python3_8
 
+sys-kernel/gentoo-kernel savedconfig
+
 app-portage/layman -csv -darcs git sync-plugin-portage gpg
 
 dev-libs/openssl bindist
@@ -36,7 +38,7 @@ app-text/zathura-meta pdf djvu
 app-emulation/docker -seccomp
 app-misc/neofetch -X
 
-dev-python/pip PYTHON_TARGETS: python2_7 -python3_6 
+dev-python/pip PYTHON_TARGETS: -python2_7 -python3_6 
 net-libs/nodejs inspector
 dev-lang/mono minimal
 
@@ -46,7 +48,6 @@ media-gfx/gimp xpm
 media-gfx/blender -game-engine #openvdb
 media-gfx/openvdb PYTHON_SINGLE_TARGET:  -* python3_8
 
-dev-util/imediff2 PYTHON_SINGLE_TARGET:  -* python3_7
 
 # for ebuilds that needs dummy X11, e.g godot
 x11-base/xorg-server xvfb
@@ -93,19 +94,7 @@ app-emulation/libpod fuse rootless
 # required by www-client/firefox-68.7.0-r1::gentoo[system-sqlite]
 # required by firefox (argument)
 >=dev-db/sqlite-3.31.1 secure-delete
-# required by dev-python/pyzmq-17.1.0::gentoo
-# required by dev-python/jupyter_client-5.2.3-r1::gentoo
-# required by dev-python/ipyparallel-6.2.3::gentoo
-# required by dev-python/ipython-7.5.0::gentoo[smp]
-# required by dev-python/ipykernel-5.1.4::gentoo[-test]
-# required by dev-python/notebook-5.7.8::gentoo
-# required by dev-python/notebook (argument)
->=net-libs/zeromq-4.3.2 drafts
-# required by @selected
-# required by @world (argument)
->=dev-python/notebook-5.7.8 -python_targets_python2_7
-# 
->=dev-python/nbformat-4.4.0-r1 -python_targets_python2_7
+
 # required by sys-power/suspend-1.0_p20190605::gentoo[crypt]
 # required by sys-power/suspend (argument)
 >=dev-libs/libgcrypt-1.8.5 static-libs
