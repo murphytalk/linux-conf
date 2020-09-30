@@ -4,6 +4,7 @@
 #set -x  #for debug
 # Check if it is Windows Linux Subsystem
 
+export PATH=/opt/npm_global/bin:$PATH
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
 

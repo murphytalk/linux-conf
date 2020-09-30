@@ -6,7 +6,7 @@ if uname -r | grep -i microsoft >/dev/null
     set WSL 1
 end
 
-if uname -r | grep -i gentoo >/dev/null
+if test -d /etc/portage
     set DISTRO_GENTOO 1
 
     function c
@@ -18,3 +18,4 @@ if uname -r | grep -i gentoo >/dev/null
 end
 
 setenv JAVA_HOME /opt/openjdk-bin-11.0.8_p10/
+set PATH /opt/npm-global/bin $PATH
