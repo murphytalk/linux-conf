@@ -39,3 +39,66 @@ sys-fs/fuse-overlayfs  ~amd64
 
 app-text/pandoc ~amd64
 app-backup/mkstage4 ~amd64
+
+www-client/firefox ~amd64
+# because of firefox
+media-libs/libvpx ~amd64
+media-libs/harfbuzz ~amd64
+dev-libs/nss ~amd64
+dev-libs/nspr ~amd64
+
+media-video/ffmpeg ~amd64
+
+kde-plasma/kwin ~amd64
+# required by kde-plasma/kwin-5.20.0::gentoo
+# required by kde-plasma/libkworkspace-5.20.0::gentoo
+# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
+# required by kde-plasma/breeze-5.20.0::gentoo
+# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
+# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9::gentoo
+# required by app-editors/visual-studio-code-1.49.2::localrepo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/kscreenlocker-5.20.0 ~amd64
+# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
+# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9::gentoo
+# required by app-editors/visual-studio-code-1.49.2::localrepo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/breeze-5.20.0 ~amd64
+# required by kde-plasma/systemsettings-5.19.5::gentoo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/libkworkspace-5.20.0 ~amd64
+# required by kde-plasma/kwin-5.20.0::gentoo
+# required by kde-plasma/libkworkspace-5.20.0::gentoo
+# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
+# required by kde-plasma/breeze-5.20.0::gentoo
+# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
+# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9::gentoo
+# required by app-editors/visual-studio-code-1.49.2::localrepo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/kwayland-server-5.20.0 ~amd64
+# required by kde-plasma/kwin-5.20.0::gentoo
+# required by kde-plasma/libkworkspace-5.20.0::gentoo
+# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
+# required by kde-plasma/breeze-5.20.0::gentoo
+# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
+# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9::gentoo
+# required by app-editors/visual-studio-code-1.49.2::localrepo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/kdecoration-5.20.0 ~amd64
+# required by kde-plasma/kscreen-5.19.5::gentoo
+# required by @selected
+# required by @world (argument)
+=kde-plasma/kde-cli-tools-5.20.0 ~amd64

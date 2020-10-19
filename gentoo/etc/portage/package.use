@@ -48,6 +48,7 @@ media-gfx/gimp xpm
 media-gfx/blender -game-engine #openvdb
 media-gfx/openvdb PYTHON_SINGLE_TARGET:  -* python3_8
 
+www-client/chromium -js-type-check -hangouts
 
 # for ebuilds that needs dummy X11, e.g godot
 x11-base/xorg-server xvfb
@@ -62,6 +63,8 @@ media-libs/libsdl joystick
 app-misc/mc -spell
 
 app-emulation/libpod fuse rootless
+
+sys-block/gparted xfs
 
 ###### manual config ends here, below are stuff added by emerge #####
 
