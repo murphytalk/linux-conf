@@ -1,4 +1,7 @@
-=dev-java/openjdk-bin-11.0.7_p10::gentoo
+dev-java/openjdk-bin
+dev-java/openjdk-jre-bin
+virtual/jdk
+virtual/jre
 
 app-emulation/vmware-modules::stefantalpalaru
 app-emulation/vmware-workstation::stefantalpalaru
@@ -25,4 +28,5 @@ dev-dotnet/referenceassemblies-pcl::dotnet
 
 <media-gfx/blender-9999::ArtSoftware
 
-
+app-arch/unrar
+=app-editors/neovim-9999::gentoo

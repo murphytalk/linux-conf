@@ -36,7 +36,13 @@ if [ ! -z "$DISTRO_ARCH" ];then
     export PATH=$PATH:/usr/lib/gettext
 fi
 
-if [ ! -z "$DISTRO_WSL" ];then
+if [ -z "$DISTRO_WSL" ];then
+    # is NAS mounted ?
+    vault=$(grep "nas.*volume1.Vault" /proc/mounts |sed 's/.* \(\/mnt.*\) nfs .*/\1/g')
+    if [ ! -z "$vault" ];then
+        export V=$vault
+    fi
+else
     export DISPLAY=:0.0
     # exclude scoop path
     a=("${(@s/:/)PATH}")

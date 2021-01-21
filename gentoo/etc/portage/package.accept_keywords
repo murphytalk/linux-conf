@@ -20,6 +20,7 @@ dev-games/godot ~amd64
 
 dev-db/sqlitebrowser ~amd64
 app-editors/qhexedit2 ~amd64
+app-editors/neovim ~amd64
 
 games-simulation/openttd ~amd64
 games-misc/openmsx ~amd64
@@ -31,7 +32,12 @@ media-gfx/blender::ArtSoftware ~amd64
 sys-cluster/spark-bin ~amd64
 app-arch/unrar ~amd64
 
-dev-java/openjdk-bin:11 ~amd64
+virtual/jdk ~amd64
+dev-java/openjdk-bin ~amd64
+virtual/jre ~amd64
+dev-java/openjdk-jre-bin ~amd64
+dev-util/idea-community ~amd64
+
 app-emulation/libpod ~amd64
 app-emulation/conmon ~amd64
 app-emulation/slirp4netns  ~amd64
@@ -50,55 +56,22 @@ dev-libs/nspr ~amd64
 media-video/ffmpeg ~amd64
 
 kde-plasma/kwin ~amd64
-# required by kde-plasma/kwin-5.20.0::gentoo
-# required by kde-plasma/libkworkspace-5.20.0::gentoo
-# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
-# required by kde-plasma/breeze-5.20.0::gentoo
-# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
-# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
-# required by virtual/notification-daemon-0::gentoo[kde]
-# required by x11-libs/libnotify-0.7.9::gentoo
-# required by app-editors/visual-studio-code-1.49.2::localrepo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/kscreenlocker-5.20.0 ~amd64
-# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
-# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
-# required by virtual/notification-daemon-0::gentoo[kde]
-# required by x11-libs/libnotify-0.7.9::gentoo
-# required by app-editors/visual-studio-code-1.49.2::localrepo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/breeze-5.20.0 ~amd64
-# required by kde-plasma/systemsettings-5.19.5::gentoo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/libkworkspace-5.20.0 ~amd64
-# required by kde-plasma/kwin-5.20.0::gentoo
-# required by kde-plasma/libkworkspace-5.20.0::gentoo
-# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
-# required by kde-plasma/breeze-5.20.0::gentoo
-# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
-# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
-# required by virtual/notification-daemon-0::gentoo[kde]
-# required by x11-libs/libnotify-0.7.9::gentoo
-# required by app-editors/visual-studio-code-1.49.2::localrepo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/kwayland-server-5.20.0 ~amd64
-# required by kde-plasma/kwin-5.20.0::gentoo
-# required by kde-plasma/libkworkspace-5.20.0::gentoo
-# required by kde-plasma/kde-cli-tools-5.20.0::gentoo
-# required by kde-plasma/breeze-5.20.0::gentoo
-# required by kde-plasma/plasma-integration-5.19.5-r1::gentoo
-# required by kde-plasma/plasma-workspace-5.19.5-r2::gentoo
-# required by virtual/notification-daemon-0::gentoo[kde]
-# required by x11-libs/libnotify-0.7.9::gentoo
-# required by app-editors/visual-studio-code-1.49.2::localrepo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/kdecoration-5.20.0 ~amd64
-# required by kde-plasma/kscreen-5.19.5::gentoo
-# required by @selected
-# required by @world (argument)
-=kde-plasma/kde-cli-tools-5.20.0 ~amd64
+kde-plasma/kscreenlocker ~amd64
+kde-plasma/breeze ~amd64
+kde-plasma/libkworkspace ~amd64
+kde-plasma/kwayland-server ~amd64
+kde-plasma/kdecoration ~amd64
+kde-plasma/kde-cli-tools ~amd64
+
+media-sound/pulseaudio-modules-bt ~amd64
+
+dev-cpp/sourcetrail ~amd64
+sys-libs/libudev-compat ~amd64
+
+app-misc/todo ~amd64
+www-client/microsoft-edge-dev ~amd64
+
+#openttd
+games-util/grfcodec ~amd64
+games-util/nml ~amd64
+games-util/catcodec ~amd64

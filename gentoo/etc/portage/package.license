@@ -29,3 +29,15 @@ net-misc/dropbox CC-BY-ND-3.0 dropbox
 # required by @selected
 # required by @world (argument)
 >=dev-dotnet/dotnetzip-semverd-1.13.7 MS-PL
+# required by google-chrome (argument)
+>=www-client/google-chrome-86.0.4240.111 google-chrome
+# required by unrar (argument)
+>=app-arch/unrar-6.0.2 unRAR
+# required by idea-community (argument)
+>=dev-util/idea-community-2020.2.4.202.8194.7 codehaus-classworlds
+# required by app-arch/p7zip (argument)
+=app-arch/p7zip-16.02-r4 unRAR
+# required by dev-cpp/sourcetrail (argument)
+>=dev-cpp/sourcetrail-2019.3.46-r2 Sourcetrail
+# required by microsoft-edge-dev (argument)
+>=www-client/microsoft-edge-dev-89.0.760.0 microsoft-edge

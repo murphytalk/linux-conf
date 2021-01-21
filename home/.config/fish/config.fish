@@ -15,7 +15,17 @@ if test -d /etc/portage
     if test -e $HOME/.alias.gentoo
         source $HOME/.alias.gentoo
     end
+
+    function tuu
+        set PORTFS /var/tmp/portage
+        if not grep $PORTFS /proc/mounts > /dev/null
+            sudo mount -t tmpfs -o size=8G,uid=portage,gid=portage,mode=775,noatime tmpfs $PORTFS
+        end
+        sudo emerge -uDU --keep-going --with-bdeps=y @world
+        sudo umount $PORTFS
+        set PORTFS
+    end
 end
 
-setenv JAVA_HOME /opt/openjdk-bin-11.0.8_p10/
+setenv JAVA_HOME /opt/openjdk-bin-11.0.9_p11/
 set PATH /opt/npm-global/bin $PATH
