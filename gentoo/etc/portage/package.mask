@@ -6,18 +6,19 @@
 */*::miramir
 */*::ArtSoftware
 */*::src_prepare-overlay
-#sys-kernel/linux-headers-5.4-r1
+>sys-kernel/linux-headers-4.19
+<sys-kernel/linux-headers-4.19
 sys-kernel/gentoo-sources
-#sys-kernel/gentoo-kernel-5.4.64
-
+sys-kernel/gentoo-kernel
+#sys-devel/gcc
+sys-fs/e2fsprogs
 #>x11-drivers/nvidia-drivers-440.100-r2
 #<x11-drivers/nvidia-drivers-440.100-r2
 
->www-client/chromium-87.0.4280.66
-<www-client/chromium-87.0.4280.66
+www-client/chromium
 
-#dev-lang/spidermonkey
-#www-client/firefox
+dev-lang/spidermonkey
+www-client/firefox
 
 
 #>app-emulation/vmware-modules-15.5.2
